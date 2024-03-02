@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subject Scores</title>
+<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color:thistle;
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    input[type="number"], input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        background-color: #7469b6;
+        color: white;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+
+    <h2 style="text-align: center;">Enter Your Subject Scores</h2>
+
+    <form id="scoreForm">
+        <label for="subjects">Number of Subjects:</label>
+        <input type="number" id="subjects" name="subjects" required>
+        <label for="aimScore">Aim Score in %:</label>
+        <input type="text" id="aimScorein" name="aimScore" required>
+        <label for="timestudying">Hours you want to spend studying(daily):</label>
+        <input type="text" id="timestudying" name="timestudying" required>
+        <button py-click="chatbot">Submit</button>
+    </form>
+
+    //<script>
+       // document.getElementById("scoreForm").addEventListener("submit", function(event) {
+           //event.preventDefault();
+            //var subjects = document.getElementById("subjects").value;
+            //var aimScore = document.getElementById("aimScore").value;
+           // var timestudying = document.getElementById("timestudying").value;
+           // alert("You are aiming for a score of " + aimScore + " in " + subjects + " subjects.");
+            // You can add further processing here, like sending the data to a server or performing calculations.
+       // });
+    </script>
+
+<script type="py" src="ai-code.py" config="./pyscript.json">
+</script>
+</body>
+</html>
